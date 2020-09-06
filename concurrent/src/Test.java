@@ -1,7 +1,10 @@
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.Executor;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.function.Consumer;
 
@@ -17,9 +20,16 @@ public class Test {
 
     }
     public static void main(String[] args) {
-        HashMap hashMap = new HashMap();
-//        ReentrantLock
-        Map map = Collections.unmodifiableMap(hashMap);
-        map.put("1", 1);
+        String x = "string";
+        String y = "string";
+        String z = new String("string");
+        Integer a = new Integer(122);
+        Integer b = new Integer(122);
+        System.out.println(x==y);
+        System.out.println(x==z);
+        System.out.println(x.equals(y));
+        System.out.println(x.equals(z));
+        System.out.println(a == b);
+
     }
 }
